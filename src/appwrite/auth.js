@@ -52,7 +52,6 @@ export class AuthService {
     } catch (error) {
       return error;
     }
-    return  null;
   }
 }
 
