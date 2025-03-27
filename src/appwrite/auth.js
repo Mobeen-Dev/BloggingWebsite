@@ -55,5 +55,5 @@ export class AuthService {
   }
 }
 
-authService = new AuthService();
+let authService = new AuthService();
 export default authService;

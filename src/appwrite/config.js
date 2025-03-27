@@ -5,13 +5,12 @@ export class Service{
     Client = new Client();
     databases;
     storage;
-    defaultQueries = [Query.sort("createdAt", "desc"), Query.limit(10), Query.equal("status", "active")];
+    defaultQueries = [Query.equal("status", "active")];
 
     constructor(){
         this.Client
             .setEndpoint(config.appwriteUrl)
             .setProject(config.appwriteProjectId)
-            .setKey(config.appwriteApiKey);
         this.databases = new Databases(this.Client);
         this.storage = new Storage(this.Client);
     }
